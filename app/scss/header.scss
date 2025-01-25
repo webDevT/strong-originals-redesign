@@ -1,0 +1,119 @@
+@import "vars";
+@import "fonts";
+
+
+.header {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    padding-top: 40px; 
+    padding-bottom: 40px;
+    z-index: 9;
+    background: $background;
+    transition: all .5;
+    font-family: $ibm-mono;
+}
+.contact-link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+}
+.header.sticky {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.header .container-fluid {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+.menu {
+    font-size: 18px;
+}
+.close-menu {
+    display: none;
+    cursor: pointer;
+    color: $green;
+}
+.close-menu {
+    display: none;
+    cursor: pointer;
+    font-family: $ibm-mono;
+    font-size: 18px;
+}
+.menu-btn {
+    cursor: pointer;
+}
+.menu-wrapper {
+    position: relative;
+    min-width: 57px;
+}
+.menu-content {
+    background: #0A0A0A;
+    position: absolute;
+    top: 150%;
+    left: 0;
+    width: 290px;
+    max-width: 100vw;
+    display: block;
+    padding: 40px 24px;
+    display: none;
+    font-family: $main-font;
+}
+.menu-item {
+    display: block;
+    margin-bottom: 13px;
+}
+.menu-item a {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    color: #9B9797;
+    background: url('../img/menu-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding-left: 60px;
+}
+.menu-item a:hover {
+    color: $blue;
+    background: url('../img/menu-arrow-blue.svg');
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+.menu-footer {
+    display: flex;
+    align-items: center;
+}
+.menu-footer__item {
+    margin-right: 10px;
+    border: 1px solid $blue;
+    padding: 2px 8px;
+    display: flex;
+    white-space: nowrap;
+}
+.menu-footer__item:hover {
+    background: $blue;
+    cursor: pointer;
+}
+@media screen and (max-width: 992px) {
+    body {
+        font-size: 4.267vw;
+    }
+    .header {
+        padding-top: 9.067vw;
+        padding-bottom: 9.067vw;
+    }
+    .logo img {
+        width: 10.933vw;
+    }
+    .menu {
+        font-size: 4.267vw;
+    } 
+     
+}
+@import "media";
+
+
+

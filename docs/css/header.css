@@ -1,0 +1,140 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  z-index: 9;
+  background: #12191B;
+  -webkit-transition: all 0.5;
+  -o-transition: all 0.5;
+  transition: all 0.5;
+  font-family: "IBM Plex Mono", serif;
+}
+
+.contact-link {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+
+.header.sticky {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.header .container-fluid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu {
+  font-size: 18px;
+}
+
+.close-menu {
+  display: none;
+  cursor: pointer;
+  color: #01DB95;
+}
+
+.close-menu {
+  display: none;
+  cursor: pointer;
+  font-family: "IBM Plex Mono", serif;
+  font-size: 18px;
+}
+
+.menu-btn {
+  cursor: pointer;
+}
+
+.menu-wrapper {
+  position: relative;
+  min-width: 57px;
+}
+
+.menu-content {
+  background: #0A0A0A;
+  position: absolute;
+  top: 150%;
+  left: 0;
+  width: 290px;
+  max-width: 100vw;
+  display: block;
+  padding: 40px 24px;
+  display: none;
+  font-family: "IBM Plex Sans", serif;
+}
+
+.menu-item {
+  display: block;
+  margin-bottom: 13px;
+}
+
+.menu-item a {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  color: #9B9797;
+  background: url("../img/menu-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center left;
+  padding-left: 60px;
+}
+
+.menu-item a:hover {
+  color: #005DF8;
+  background: url("../img/menu-arrow-blue.svg");
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+.menu-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-footer__item {
+  margin-right: 10px;
+  border: 1px solid #005DF8;
+  padding: 2px 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+}
+
+.menu-footer__item:hover {
+  background: #005DF8;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 4.267vw;
+  }
+  .header {
+    padding-top: 9.067vw;
+    padding-bottom: 9.067vw;
+  }
+  .logo img {
+    width: 10.933vw;
+  }
+  .menu {
+    font-size: 4.267vw;
+  }
+}

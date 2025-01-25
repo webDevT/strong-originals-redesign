@@ -1,0 +1,39 @@
+@import "vars";
+@import "fonts";
+
+
+.about {
+    .container-fluid {
+        display: flex;
+        justify-content: space-between;
+    }
+    .btn-link {
+        margin-top: 60px;
+    }
+}
+
+.about__title {
+    min-width: 45%;
+}
+.about__content p {
+    font-family: $secondary-font;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 992px) {
+   .about .container-fluid {
+        flex-direction: column;
+   }
+   .about__title {
+    width: 100%;
+   }
+   .about .btn-link {
+    display: none;
+   }
+
+}
+  
+@import "media";
+
+
+

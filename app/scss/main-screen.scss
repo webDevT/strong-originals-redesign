@@ -1,0 +1,340 @@
+@import "vars";
+@import "fonts";
+
+
+.main-screen {
+    min-height: 100vh;
+}
+.video-section {
+    min-height: 320px;
+    position: relative;
+    //z-index: 999;
+    overflow-x: hidden;
+}
+.video {
+    position: relative;
+    transition: all 1.2s ease-in-out;
+    width: 563px;
+    height: 118px;
+    z-index: 999;
+    object-fit: cover;
+    transform-origin: center bottom;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.video.fullscreen {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.video.mini {
+    position: absolute;
+    width: 100%;
+    height: 370px;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    z-index: 5;
+}
+
+.video-section .container-fluid {
+    //display: flex;
+    //justify-content: center;
+}
+
+.video-xs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+//start text section style 
+.text-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.video-xs {
+    width: 48%;
+    height: 370px;
+}
+.text-section__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.text-section-title {
+    width: 48%;
+    font-size: 100px;
+    font-family: $pressio;
+    font-weight: 900;
+    line-height: .99;
+    text-transform: uppercase;
+}
+.text {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: $secondary-font;
+    padding-left: 9px;
+    padding-right: 9px;
+    text-transform: uppercase;  
+}
+
+.text-section__img {
+    width: 267px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+}
+.text-section__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.text-section__row {
+    margin-bottom: 25px;
+}
+.text-section__img--xs {
+    width: 100px;
+}
+.text {
+    position: relative;
+}
+.text--purple:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: url('../img/t1.svg');
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 58px;
+    display: block;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+    display: none;
+}
+.text--bulb:after {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    background: url('../img/t2.svg');
+    background-size: cover;
+    background-position: center;
+    width: 27px;
+    height: 39px;
+    display: block;
+    transform: translateX(-50%) translateY(-100%);
+    z-index: -1;
+}
+.text--red:after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 9px;
+    background: url('../img/t3.svg');
+    background-size: cover;
+    background-position: center;
+    width: 40px;
+    height: 66px;
+    display: block;
+    transform: translateX(-50%) translateY(0%);
+    z-index: -1;
+}
+.text--circle:after {
+    content: '';
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    background: url('../img/t4.svg');
+    background-size: cover;
+    background-position: center;
+    width: 214px;
+    height: 107px;
+    display: block;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+}
+.text--line::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 17px;
+    background: url('../img/t5.svg');
+    background-size: cover;
+    background-position: center;
+    width: 332px;
+    height: 11px;
+    display: block;
+    z-index: -1;
+}
+//end text sctin style
+.main-screen {
+    padding-top: 0px;
+    display: flex;
+    align-items: center;
+}
+.main-screen__content {
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main-screen__row:nth-child(2) {
+    text-align: right;
+}
+.h1 {
+    font-size: 120px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: $pressio;
+    line-height: 1;
+}
+.main-screen__row--two {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    p {
+        width: 440px;
+    }
+}
+.video-section .container-fluid {
+    position: relative;
+    .video {
+        z-index: 999;
+    }
+    .link {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        //transform: translateY(-50%);
+        display: block;
+        z-index: 0;
+        border-bottom: 1px solid #fff;
+        padding-bottom: 4px;
+    }
+}
+@media screen and (max-width: 1140px) {
+    .h1 {
+        font-size: 10vw;
+    }
+    .main-screen__content {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .video.mini,
+    .video-xs {
+        height: 5vw;
+    }
+    
+    .main-screen {
+        overflow: hidden;
+    }
+    .main-screen__row--two {
+        flex-direction: column;
+        display: flex;
+    }
+    .text-section .text-section__row {
+        flex-direction: column;
+        display: flex;
+    }
+    .text-section .container-fluid {
+        width: 100%;
+        max-width: 100%;
+    }
+    .video-xs {
+        width: 100%;
+        height: 56vw;
+    }
+    .video.mini {
+        height: 56vw;
+    }
+    .video-section {
+        .container-fluid {
+            flex-direction: column;
+        }
+    }
+    .video-section .container-fluid .link {
+        position: static;
+    }
+    .text-section-title {
+        width: 100%;
+        font-size: 17.333vw;
+    }
+    .main-screen__row--two p {
+        width: 100%;
+    }
+    .main-screen {
+        min-height: auto;
+        padding-top: 32vw;
+    }
+    .h1 {
+        font-size: 12vw;
+        line-height: 1.1;
+    }
+    .main-screen__row--two .main-screen__col:first-child {
+        align-self: flex-start;
+    }
+    .main-screen__col p {
+        margin-top: 5vw;
+        text-align: center;
+        font-size: 4.8vw;
+        font-family: $secondary-font;
+    }
+    .video-section .container-fluid .link {
+        text-align: center;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 22.933vw;
+
+    }
+    .video-section .container-fluid {
+        display: flex;
+        align-items: center;
+        padding-top: 10.667vw;
+    }
+    .video {
+        width: 100%;
+    }
+    .text-section-title {
+        padding-left: 6.4vw;
+        padding-right: 6.4vw;
+        margin-top: 37.333vw;
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+    .text-section {
+        padding-top: 26.667vw;
+        padding-bottom: 26.667vw;
+    }
+
+
+        
+    
+    
+        
+
+    
+
+
+    
+}
+
+
+@import "media";
+
+
+
