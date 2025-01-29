@@ -3,7 +3,7 @@
 
 
 .main-screen {
-    min-height: 100vh;
+    min-height: 80vh;
 }
 .video-section {
     min-height: 320px;
@@ -21,6 +21,8 @@
     transform-origin: center bottom;
     left: 50%;
     transform: translateX(-50%);
+    transition: all 1.2s ease-in-out;
+    
 }
 
 .video.fullscreen {
@@ -31,6 +33,7 @@
     z-index: 10;
     left: 50%;
     transform: translateX(-50%);
+    transition: all 1.2s ease-in-out;
 
 }
 
@@ -42,6 +45,7 @@
     left: 0;
     transform: none;
     z-index: 5;
+    transition: all 1.2s ease-in-out;
 }
 
 .video-section .container-fluid {
@@ -54,6 +58,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    transition: all 1.2s ease-in-out;
 }
 
 //start text section style 
@@ -223,6 +228,19 @@
         padding-bottom: 4px;
     }
 }
+#video {
+    transition: all 1.2s ease-in-out;
+}
+/* Видео по умолчанию будет скрыто */
+.video-section {
+    overflow: visible;
+}
+.video.mini {
+    top: 100%;
+    width: 45%;
+    transform: translateY(440px);
+}
+
 @media screen and (max-width: 1140px) {
     .h1 {
         font-size: 10vw;
@@ -319,6 +337,10 @@
     .text-section {
         padding-top: 26.667vw;
         padding-bottom: 26.667vw;
+    }
+    .video.mini {
+        transform: translateY(100vw);
+        width: 100%;
     }
 
 

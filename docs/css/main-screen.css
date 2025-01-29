@@ -1,5 +1,6 @@
+@charset "UTF-8";
 .main-screen {
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 .video-section {
@@ -25,6 +26,7 @@
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
+  transition: all 1.2s ease-in-out;
 }
 
 .video.fullscreen {
@@ -37,6 +39,9 @@
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
+  -webkit-transition: all 1.2s ease-in-out;
+  -o-transition: all 1.2s ease-in-out;
+  transition: all 1.2s ease-in-out;
 }
 
 .video.mini {
@@ -49,6 +54,9 @@
       -ms-transform: none;
           transform: none;
   z-index: 5;
+  -webkit-transition: all 1.2s ease-in-out;
+  -o-transition: all 1.2s ease-in-out;
+  transition: all 1.2s ease-in-out;
 }
 
 .video-xs {
@@ -62,6 +70,9 @@
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  -webkit-transition: all 1.2s ease-in-out;
+  -o-transition: all 1.2s ease-in-out;
+  transition: all 1.2s ease-in-out;
 }
 
 .text-section {
@@ -278,6 +289,25 @@
   padding-bottom: 4px;
 }
 
+#video {
+  -webkit-transition: all 1.2s ease-in-out;
+  -o-transition: all 1.2s ease-in-out;
+  transition: all 1.2s ease-in-out;
+}
+
+/* Видео по умолчанию будет скрыто */
+.video-section {
+  overflow: visible;
+}
+
+.video.mini {
+  top: 100%;
+  width: 45%;
+  -webkit-transform: translateY(440px);
+      -ms-transform: translateY(440px);
+          transform: translateY(440px);
+}
+
 @media screen and (max-width: 1140px) {
   .h1 {
     font-size: 10vw;
@@ -387,5 +417,11 @@
   .text-section {
     padding-top: 26.667vw;
     padding-bottom: 26.667vw;
+  }
+  .video.mini {
+    -webkit-transform: translateY(100vw);
+        -ms-transform: translateY(100vw);
+            transform: translateY(100vw);
+    width: 100%;
   }
 }
